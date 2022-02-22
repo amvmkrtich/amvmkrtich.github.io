@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let start = Date.now();
+
+    for(let i = 0; i < 1000000; i++){
+        let something = i*i*i;
+    }
+
+    let end  = Date.now();
+
+    let date = new Date("2012-02-20 3:12");
+
+
+    function getWeekDay(date){
+        let dates = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+        return dates[date.getDay()];
+    }
+    function getLocalDay(date){
+        let dates = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+        return dates[date.getDay()-1];
+    }
+
+    date = new Date(2014, 0, 3);  // 3 января 2012 года
+    alert( getLocalDay(date) );
+</script>
+</body>
+</html>

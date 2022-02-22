@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    *  - number
+    *  - bigint
+    *  - string
+    *  - boolean
+    *  - null
+    *  - undefined
+    *  - array / object
+    *  - function
+    *
+
+    function fn(){}
+    let a;
+    a = "Mkrtich"; // string
+    a = 23; // number
+    a = 23n; // biging
+    a = true; // boolean
+    a = undefined; // undefined
+    a = null; // object
+    a = function (){}; // function
+    a = fn; // function
+    a = fn(); // undefined
+    a = Symbol(a); // symbol
+    a = null;
+
+    const name = prompt("What's your name ?", "");
+    const result = confirm("Are you 18+ ?");
+    if(result){
+        console.log(`Hi ${name}, now you can watch all naked girls photos ... `);
+    }else{
+        console.log(`Well... ${name} You can watch cartoon photos ...`);
+    }
+    * */
+
+    /*outerFor: for(let i = 0; i < 2; i++){
+        innerFor: for(let j = 0; j < 2; j++){
+            let input = +prompt(`Значение на координатах ${i} - ${j}`);
+            if(input === 4) break outerFor;
+        }
+    }
+    alert("Done");*/
+
+    function fix(num, len){
+        return (Math.round(num * 10**len) / 10**len);
+    }
+
+
+    function random(min, max){
+        return (Math.floor(Math.random()*(max - min)) + min);
+    }
+
+    function sumAll(...args) { // args — имя массива
+        return args;
+    }
+
+
+    function ucFirst(str){
+        if(!str) return str;
+        return str[0].toUpperCase() + str.slice(1);
+    }
+
+    function checkSpam(str){
+        str = str.toLowerCase();
+
+        return ( str.includes("viagra") || str.includes("xxx"));
+    }
+
+    function truncate(str, maxlength) {
+        return (str.length > maxlength) ?
+            str.slice(0, maxlength - 1) + '…' : str;
+    }
+
+    function extractCurrencyValue(str){
+        return +str.slice(1);
+    }
+
+    function sumInput(){
+        let arr = [];
+
+        while (true){
+            let input = prompt("Input?", "0");
+            if(input && !isNaN(+input)){
+                arr.push(+input);
+            }else{
+                break;
+            }
+        }
+        return arr.reduce((aggr, val) => aggr + val);
+    }
+
+    function getMaxSubSum(arr){
+        let maxSum = 0;
+        let subSum = 0;
+
+        for(let item of arr){
+            subSum += item;
+            maxSum = Math.max(maxSum, subSum);
+            if(subSum < 0) subSum = 0;
+        }
+        return maxSum;
+    }
+
+    console.log(getMaxSubSum( [-1, 2, 3, -9, 11] ));
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+    function Calculator(){
+        this.read = function (){
+            this.a = +prompt("a?");
+            this.b = +prompt("b?");
+        }
+        this.sum = function () {
+            return this.a + this.b;
+        }
+        this.mul = function () {
+            return this.a * this.b;
+        }
+    }
+    let calculator = new Calculator()
+
+
+    function Accumulator(startingValue){
+        this.value = startingValue;
+        this.read = function (){
+            this.value += +prompt("What do you want to add?");
+        }
+    }
+
+    let id = Symbol.for("id");
+    let idAgain = Symbol.for("id");
+
+    let user = {
+        name: "Mahana",
+        age: 21,
+
+        toString(){
+            return "78666";
+        },
+    };
+
+    // alert(user * 2);
+
+    // alert(user2.admin?.());
+
+
+    /*let range = {
+        from: 1,
+        to: 5
+    };
+
+    range[Symbol.iterator] = function (){
+        return {
+            current: this.from,
+            last: this.to,
+            next(){
+                if(this.current <= this.last){
+                    return {done: false, value: this.current++};
+                }else{
+                    {done: true};
+                }
+            }
+        }
+    }
+
+    for (let num of range) {
+        alert(num); // 1, затем 2, 3, 4, 5
+    }*/
+
+
+    let prices = {
+        banana: 1,
+        orange: 2,
+        meat: 4,
+    };
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    salaries = {};
+
+    // function sumSalaries(salaries){
+    //     return Object.values(salaries).reduce((aggr, val) => aggr + val, 0);
+    // }
+
+    function sumSalaries(salaries){
+        let sum = 0;
+        for(let val of Object.values(salaries)){
+            sum += val;
+        }
+        return sum;
+    }
+
+    function count(obj){
+        return Object.keys(obj).length;
+    }
+    /*user = {
+        name: 'John',
+        age: 30
+    };
+
+    let arr = ["Ilya", "Kantor"];
+    let [name, surname] = "Mkrtich Aleksanyan".split(" ");
+    console.log(name);
+    console.log(surname);
+
+    let [firstName, , , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+    console.log(title);
+    let [a, b, c] = "mkrtich";
+    console.log(a);
+
+    let person = {};
+    [person.name, person.surname] = "Mkrtich Aleksanyan".split(" ");
+    console.log(person);
+
+    for(let [key, val] of Object.entries(user)){
+        console.log(`${key} -> ${val}`);
+    }*/
+
+    /*let [name1, name2, name3, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+    let [imya, familya, otchestva = "No answer"] = "Mkrtich Aleksanyan Lyovaevich".split(" ");
+    console.log(imya);
+    console.log(familya);
+    console.log(otchestva);*/
+
+    /*let options = {
+        size: {
+            width: 100,
+            height: 200
+        },
+        items: ["Cake", "Donut"],
+        extra: true
+    };
+
+    let {size: {width, height}, items} = options;
+
+    function showMenu({title = "Untitled", width = 200, height = 100, classes = []} = {}) {
+        alert(`We created a menu named as "${title}" which has ${width}px width and ${height}px height...`);
+        alert(classes);
+    }
+    options = {
+        title: "Main Menu",
+        height: 345,
+        classes: ["class1", "class2", "container"]
+    }
+
+    showMenu();
+*/
+
+    user = {
+        name: "John",
+        years: 30
+    };
+    salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    let {name, years: age, isAdmin = false} = user;
+
+    function topSalary(salaries){
+        let max = 0;
+        let maxName = null;
+        for(let [name, sal] of Object.entries(salaries)){
+            if(sal > max){
+                max = sal;
+                maxName = name;
+            }
+        }
+        return maxName;
+    }
+
+
+    console.log(topSalary(salaries));
+</script>
+</body>
+</html>

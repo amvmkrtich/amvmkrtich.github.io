@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*let user = new Map();
+    user.set("id", 1);
+    user.set("name", "John").set("age", 22).set(true, "Ha");
+
+    // console.log(user.keys());
+    // console.log(user.values());
+    // console.log(user.entries());
+
+    for(let item of user){
+        console.log(Array.isArray(item));
+    }
+
+    let recipeMap = new Map([
+        ["огурец", 500],
+        ["помидор", 350],
+        ["лук",    50]
+    ]);
+
+    for(let vgtb of recipeMap){
+        console.log(vgtb);
+    }
+
+    recipeMap.forEach((value, key, map) => {
+        console.log(`${key}: ${value}`);
+    })
+
+    let obj = {
+        name: "John",
+        age: 30
+    };
+    let objMap = new Map(Object.entries(obj));
+    let newObj = Object.fromEntries(objMap);
+    obj.id = 12;
+    console.log(objMap);
+    console.log(newObj);
+
+    let map = new Map();
+    map.set("banana", 1).set("orange", 2).set("meat", 4).set("meat", 4);
+    console.log(map);
+    let obj = Object.fromEntries(map);
+    console.log(obj);*/
+
+    function unique(arr){
+        let unique = new Set(arr);
+        return Array.from(unique);
+    }
+
+    function aclean(arr){
+        let map = new Map();
+        for(let word of arr){
+            let sorted = word.toLowerCase().split("").sort().join("");
+            map.set(sorted, word);
+        }
+        return Array.from(map.values());
+    }
+
+    /*function acleanObj(arr){
+        let obj = {};
+        for(let word of arr){
+            let sorted = word.toLowerCase().split("").sort().join("");
+            obj[sorted] = word;
+        }
+        return Object.values(obj);
+    }
+
+    let values = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+    ];
+
+    let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+    console.log(acleanObj(arr));
+    */
+
+    let map = new Map();
+
+    let weakmap = new WeakMap();
+    let obj = {};
+
+    map.set(obj, "...");
+    weakmap.set(obj, "...");
+    obj = null;
+
+    console.log(map.size);
+    console.log(weakmap.size);
+
+</script>
+</body>
+</html>
