@@ -2,7 +2,7 @@
 // set Properties in loop
 function addProp(selectors, varName, step=0.5){
     if(!Array.isArray(selectors)) return;
-    // console.log(selectors)
+    
     for(let selector of selectors){
         let elems = document.querySelectorAll(selector);
         for(let elem of elems){
@@ -13,14 +13,7 @@ function addProp(selectors, varName, step=0.5){
     }
 }
 
-addProp([
-    // ".section-sales__body > .row",
-    // ".img-text-block > .row",
-    // ".section-learning .row",
-    // ".section-learning__text",
-    // ".section-learning__content"
-    "[data-hidden]"
-    ],
+addProp(["[data-hidden]"],
     "--anim-delay",
     0.2
 );
