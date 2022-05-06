@@ -1,4 +1,4 @@
-console.log("working...");
+console.log("w...");
 // set Properties in loop
 function addProp(selectors, varName, step=0.5){
     if(!Array.isArray(selectors)) return;
