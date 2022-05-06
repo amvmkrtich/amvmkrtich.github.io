@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #CF51CE;
+  --text-color: #331A2F;
+  --font-main: Lato, sans-serif;
+  --x-space: 40px;
+  --col_space: 15px;
+  --border: 1px solid var(--primary-color);
+  --cont-width: 1610px;
+  --anim-delay: 0.3s;
+}
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "general";
+@import "header";
+@import "pages";
+
+@include respond-below(sm){
+  :root{
+    --x-space: 15px;
+  }
+}
+
+
+
+
+
