@@ -1,0 +1,9 @@
+<svg width="825" height="187" viewBox="0 0 825 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="93.5" cy="93.5" r="93" stroke="currentColor"/>
+<circle cx="233.5" cy="93.5" r="93" stroke="currentColor"/>
+<circle cx="591.5" cy="93.5" r="93" stroke="currentColor"/>
+<circle cx="731.5" cy="93.5" r="93" stroke="currentColor"/>
+<path d="M389.986 132.672L392.599 132.672L412.197 132.672L431.796 132.672L434.409 132.672C434.409 123.33 442.085 115.626 451.395 115.626L451.395 113.004L451.395 93.3358L451.395 73.6677L451.395 71.0453C442.085 71.0453 434.409 63.342 434.409 53.9997L431.796 53.9997L412.197 53.9997L392.599 53.9997L389.986 53.9997C389.986 63.342 382.309 71.0453 373 71.0453L373 73.6677L373 93.3358L373 113.004L373 115.626C382.309 115.626 389.986 123.33 389.986 132.672Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M392 89.0745L432.014 89.0745L432.014 97.2695L392 97.2695L392 89.0745Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M407.909 113.179L407.909 73.165L416.104 73.165L416.104 113.179L407.909 113.179Z" fill="white"/>
+</svg>
